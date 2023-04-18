@@ -7,10 +7,10 @@ const RootLayout = () => {
         <header>
             <nav>
             <div className="row">
-                <h1 className="l-6 m-6 c-12">React Web</h1>
-                <NavLink className="l-2 m-4 c-12" to="/">Home</NavLink>
-                <NavLink className="l-2 m-4 c-12" to="about">About</NavLink>
-                <NavLink className="l-2 m-4 c-12" to="help">Help</NavLink>
+                <h1 className="l-3 m-4 c-12">React Web</h1>
+                <NavLink className="l-1 l-o-6 m-4 c-12" to="/">Home</NavLink>
+                <NavLink className="l-1 m-4 c-12" to="about">About</NavLink>
+                <NavLink className="l-1 m-4 c-12" to="help">Help</NavLink>
             </div>
             </nav>
         </header>
