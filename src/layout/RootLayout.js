@@ -8,9 +8,10 @@ const RootLayout = () => {
             <nav>
             <div className="row">
                 <h1 className="l-3 m-4 c-12">React Web</h1>
-                <NavLink className="l-1 l-o-6 m-4 c-12" to="/">Home</NavLink>
-                <NavLink className="l-1 m-4 c-12" to="about">About</NavLink>
-                <NavLink className="l-1 m-4 c-12" to="help">Help</NavLink>
+                <NavLink className="l-1 l-o-5 m-2 c-12" to="/">Home</NavLink>
+                <NavLink className="l-1 m-2 c-12" to="about">About</NavLink>
+                <NavLink className="l-1 m-2 c-12" to="help">Help</NavLink>
+                <NavLink className="l-1 m-2 c-12" to="careers">Careers</NavLink>
             </div>
             </nav>
         </header>
