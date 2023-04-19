@@ -9,14 +9,16 @@ import Home from "./pages/Home";
 import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
 import CareerDetails, { careerDetailsLoader } from "./pages/careers/CareerDetails";
-
+import Careers, { careersLoader } from "./pages/careers/Careers";
+import CareerError from "./pages/careers/CareerError";
+import NotFound from "./pages/NotFound";
 
 // layout
 import RootLayout from "./layout/RootLayout";
 import HelpLayout from "./layout/HelpLayout";
-import NotFound from "./pages/NotFound";
 import CareersLayout from "./layout/CareersLayout";
-import Careers, { careersLoader } from "./pages/careers/Careers";
+
+
 
 
 
@@ -29,7 +31,7 @@ const router = createBrowserRouter(
               <Route path="faq" element = {<Faq />} />
               <Route path="contact" element = {<Contact />} />
           </Route>
-          <Route path="careers" element={<CareersLayout />}>
+          <Route path="careers" element={<CareersLayout />} errorElement = {<CareerError />}>
             <Route index
             element={<Careers />}
             loader = {careersLoader}
