@@ -3,6 +3,7 @@ import { Form, redirect, useActionData } from 'react-router-dom'
 
 export default function Contact() {
   const data = useActionData()
+  
 
   return (
     <div className="contact">
@@ -12,6 +13,7 @@ export default function Contact() {
       <label>
           <span>Your email:</span>
           <input type="email" name="email" required />
+          {dataemail && dataemail.errormail && <p>{data.errormail}</p>}
         </label>
         <label>
           <span>Your message:</span>
@@ -39,6 +41,17 @@ export const submitAction = async ({ request }) => {
   if(submission.message.length < 10){
     return {error : 'Message must be over 10 characters'}
   }
+  var at = submission.email.indexOf('@')
+  var dot = submission.email.lastIndexOf(".")
+  var space = submission.email.indexOf(' ')
+  if(!((at != -1) && //có ký tự @
+  (at != 0) && //ký tự @ không nằm ở vị trí đầu
+  (dot != -1) && //có ký tự .
+  (dot > at + 1) && (dot < submission.email.length - 1) //phải có ký tự nằm giữa @ và . cuối cùng
+  &&
+  (space == -1))){
+    return {errormail : 'Email not valid!'}
+  } 
 // Sent data to server
 
 
