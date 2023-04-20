@@ -42,7 +42,7 @@ const router = createBrowserRouter(
               loader = { careerDetailsLoader }
             />
           </Route>
-
+          
           <Route path="*" element={<NotFound />} />
     </Route>
   )
