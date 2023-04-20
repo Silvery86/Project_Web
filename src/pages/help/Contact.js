@@ -13,7 +13,7 @@ export default function Contact() {
       <label>
           <span>Your email:</span>
           <input type="email" name="email" required />
-          {dataemail && dataemail.errormail && <p>{data.errormail}</p>}
+          {data && data.errormail && <p>{data.errormail}</p>}
         </label>
         <label>
           <span>Your message:</span>
