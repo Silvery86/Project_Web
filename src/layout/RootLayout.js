@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom"; 
+import Breadcrums from "../components/Breadcrums";
 
 
 const RootLayout = () => {
@@ -14,6 +15,7 @@ const RootLayout = () => {
                 <NavLink className="l-1 m-2 c-12" to="careers">Careers</NavLink>
             </div>
             </nav>
+            <Breadcrums />
         </header>
         <main>
             <Outlet/>
