@@ -44,12 +44,12 @@ export const submitAction = async ({ request }) => {
   var at = submission.email.indexOf('@')
   var dot = submission.email.lastIndexOf(".")
   var space = submission.email.indexOf(' ')
-  if(!((at != -1) && //có ký tự @
-  (at != 0) && //ký tự @ không nằm ở vị trí đầu
-  (dot != -1) && //có ký tự .
+  if(!((at !== -1) && //có ký tự @
+  (at !== 0) && //ký tự @ không nằm ở vị trí đầu
+  (dot !== -1) && //có ký tự .
   (dot > at + 1) && (dot < submission.email.length - 1) //phải có ký tự nằm giữa @ và . cuối cùng
   &&
-  (space == -1))){
+  (space === -1))){
     return {errormail : 'Email not valid!'}
   } 
 // Sent data to server
