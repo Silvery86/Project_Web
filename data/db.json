@@ -42,5 +42,43 @@
       "salary": 30000,
       "location": "London, UK"
     }
+  ],
+  "products": [
+    {
+     "id": 1,
+     "productname": "Iphone 14 Promax",
+     "productprice": 1999,
+     "stock": 19
+    },
+    {
+      "id": 2,
+      "productname": "Iphone 15 Promax",
+      "productprice": 2999,
+      "stock": 29
+     },
+     {
+      "id": 3,
+      "productname": "Iphone 13 Promax",
+      "productprice": 999,
+      "stock": 99
+     },
+     {
+      "id": 4,
+      "productname": "Iphone 11 Pro",
+      "productprice": 299,
+      "stock": 59
+     },
+     {
+      "id": 5,
+      "productname": "Iphone 12",
+      "productprice": 399,
+      "stock": 29
+     },
+     {
+      "id": 6,
+      "productname": "Iphone 11 Promax",
+      "productprice": 499,
+      "stock": 4
+     }
   ]
 }

@@ -1,4 +1,4 @@
-import { createBrowserRouter, Route, NavLink, createRoutesFromElements, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import './Grid.css'
 import './App.css'
 
@@ -17,6 +17,8 @@ import NotFound from "./pages/NotFound";
 import RootLayout from "./layout/RootLayout";
 import HelpLayout from "./layout/HelpLayout";
 import CareersLayout from "./layout/CareersLayout";
+import ProductsLayout from "./layout/ProductsLayout";
+import Products, { productsLoader } from "./pages/products/Products";
 
 
 
@@ -41,6 +43,13 @@ const router = createBrowserRouter(
               element={<CareerDetails />}
               loader = { careerDetailsLoader }
             />
+          </Route>
+          <Route path="products" element={<ProductsLayout />} >
+            <Route index 
+            element={<Products />} 
+            loader = {productsLoader}
+            />
+
           </Route>
           
           <Route path="*" element={<NotFound />} />

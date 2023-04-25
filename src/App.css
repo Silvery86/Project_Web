@@ -113,3 +113,23 @@ form {
 .breadcrumbs .crumb a {
   color: #ddd;
 }
+
+/* products list */
+.products > a {
+  display: block;
+  background: rgba(0,0,0,0.2);
+  background-clip: content-box;
+  border-radius: 10px;
+  
+  text-decoration: none;
+}
+.products > a:hover p {
+  color: var(--primary);
+}
+.products p {
+  margin: 0;
+}
+.products > a p:last-child {
+ font-size: 0.8em;
+ color: #bbb;
+}

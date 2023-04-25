@@ -8,8 +8,9 @@ const RootLayout = () => {
         <header>
             <nav>
             <div className="row">
-                <h1 className="l-3 m-4 c-12">React Web</h1>
-                <NavLink className="l-1 l-o-5 m-2 c-12" to="/">Home</NavLink>
+                <h1 className="l-3 m-2 c-12">React Web</h1>
+                <NavLink className="l-1 l-o-4 m-2 c-12" to="/">Home</NavLink>
+                <NavLink className="l-1 m-2 c-12" to="products">Product</NavLink>
                 <NavLink className="l-1 m-2 c-12" to="about">About</NavLink>
                 <NavLink className="l-1 m-2 c-12" to="help">Help</NavLink>
                 <NavLink className="l-1 m-2 c-12" to="careers">Careers</NavLink>
