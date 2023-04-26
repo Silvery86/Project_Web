@@ -18,7 +18,7 @@ export const productDetailsLoader = async ( {params} ) => {
     const res = await fetch('http://localhost:4000/products/' + id)
 
     if(!res.ok) {
-        throw Error('Could not find that carrer')
+        throw Error('Could not find that product')
     }
 
     return res.json()

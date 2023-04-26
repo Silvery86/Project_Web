@@ -20,6 +20,7 @@ import CareersLayout from "./layout/CareersLayout";
 import ProductsLayout from "./layout/ProductsLayout";
 import Products, { productsLoader } from "./pages/products/Products";
 import ProductDetails, { productDetailsLoader } from "./pages/products/ProductDetails";
+import ProductError from "./pages/products/ProductError";
 
 
 
@@ -45,7 +46,7 @@ const router = createBrowserRouter(
               loader = { careerDetailsLoader }
             />
           </Route>
-          <Route path="products" element={<ProductsLayout />} >
+          <Route path="products" element={<ProductsLayout />} errorElement={<ProductError/>}>
             <Route index 
             element={<Products />} 
             loader = {productsLoader}
