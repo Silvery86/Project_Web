@@ -19,6 +19,7 @@ import HelpLayout from "./layout/HelpLayout";
 import CareersLayout from "./layout/CareersLayout";
 import ProductsLayout from "./layout/ProductsLayout";
 import Products, { productsLoader } from "./pages/products/Products";
+import ProductDetails, { productDetailsLoader } from "./pages/products/ProductDetails";
 
 
 
@@ -49,7 +50,11 @@ const router = createBrowserRouter(
             element={<Products />} 
             loader = {productsLoader}
             />
-
+            <Route 
+              path=":id"
+              element={<ProductDetails/>}
+              loader = { productDetailsLoader }
+            />
           </Route>
           
           <Route path="*" element={<NotFound />} />
