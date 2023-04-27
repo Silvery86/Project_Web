@@ -21,6 +21,9 @@ const RootLayout = () => {
         <main>
             <Outlet/>
         </main>
+        <footer>
+                <h1>Copyright</h1>
+        </footer>
         </div>
      );
 }
