@@ -134,6 +134,7 @@ form {
  color: #bbb;
 }
 /* search box */
-.products input{
+.products .search-box input{
   color: black;
+  
 }

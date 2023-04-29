@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
+import Search from '../../components/Search';
 
 export default function Products() {
   const [products, setProducts] = useState([])
-  const [searchField, setSearchField] = useState('')
+  let [searchField, setSearchField] = useState('')
   const fetchData = useLoaderData();
   useEffect(() => {
     setProducts(fetchData)
   },[fetchData])
   
-
   const filterProducts = products.filter((product) => {
     return product.productname.toLocaleLowerCase().includes(searchField);
   })
+ 
 
   return (
     <div className='products row'>
-        <input className="search-box col l-12 m-12 c-12" type="search" placeholder="Search product" onChange={(event) => {
-            const searchField = event.target.value.toLocaleLowerCase();
-            return setSearchField(searchField)
-
-        }}/>
+        <div className='col l-12 m-12 c-12'>
+            <Search searchValue={setSearchField}/>
+        </div>
+       
+        
         {filterProducts.map(product => (
             <Link className="col l-3 m-6 c-6" to={product.id.toString()} key={product.id}>
             <p>{product.productname}</p>
