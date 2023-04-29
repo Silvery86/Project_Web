@@ -133,3 +133,7 @@ form {
  font-size: 0.8em;
  color: #bbb;
 }
+/* search box */
+.products input{
+  color: black;
+}
