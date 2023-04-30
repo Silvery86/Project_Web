@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import Search from '../../components/Search';
+import ProductsList from './ProductsList';
 
 export default function Products() {
   const [products, setProducts] = useState([])
@@ -16,19 +17,13 @@ export default function Products() {
  
 
   return (
-    <div className='products row'>
+    <div className='row'>
         <div className='col l-12 m-12 c-12'>
             <Search searchValue={setSearchField}/>
-        </div>
-       
-        
-        {filterProducts.map(product => (
-            <Link className="col l-3 m-6 c-6" to={product.id.toString()} key={product.id}>
-            <p>{product.productname}</p>
-            <p>Price: {product.productprice}</p>
-            <p>Number of stock: {product.stock}</p>
-          </Link>
-        ))}
+        </div>    
+       <div className='col l-12 m-12 c-12'>
+            <ProductsList filterProducts={filterProducts} />
+       </div>
       
     </div>
   )
