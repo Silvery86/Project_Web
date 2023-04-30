@@ -11,18 +11,29 @@ export default function Products() {
     setProducts(fetchData)
   },[fetchData])
   
+  // filter products array keep product meet the search field from input then store in new array
   const filterProducts = products.filter((product) => {
     return product.productname.toLocaleLowerCase().includes(searchField);
   })
- 
+
+  // when user input in search box will change value of search field value
+  const onSearchChange = (event) => {
+    setSearchField(event.target.value.toLocaleLowerCase());
+  }
 
   return (
     <div className='row'>
         <div className='col l-12 m-12 c-12'>
-            <Search searchValue={setSearchField}/>
+            <Search onSearchHandler={onSearchChange}
+            placeholder="Search for product name"
+            classname="search-box"
+            />
         </div>    
        <div className='col l-12 m-12 c-12'>
-            <ProductsList filterProducts={filterProducts} />
+            <ProductsList 
+            filterProducts={filterProducts}
+            classname="products"
+             />
        </div>
       
     </div>
