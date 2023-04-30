@@ -120,7 +120,7 @@ form {
   background: rgba(0,0,0,0.2);
   background-clip: content-box;
   border-radius: 10px;
-  
+  padding: ;
   text-decoration: none;
 }
 .products > a:hover p {
