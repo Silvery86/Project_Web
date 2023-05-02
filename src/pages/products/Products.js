@@ -6,15 +6,23 @@ import ProductsList from './ProductsList';
 export default function Products() {
   const [products, setProducts] = useState([])
   let [searchField, setSearchField] = useState('')
+  const [filterProducts, setFilterProducts] = useState(products)
   const fetchData = useLoaderData();
+
+
   useEffect(() => {
     setProducts(fetchData)
   },[fetchData])
   
   // filter products array keep product meet the search field from input then store in new array
-  const filterProducts = products.filter((product) => {
-    return product.productname.toLocaleLowerCase().includes(searchField);
-  })
+  // this only happen when products and searchField value is change
+  useEffect(() => {
+    const newFilterProducts = products.filter((product) => {
+      return product.productname.toLocaleLowerCase().includes(searchField);
+    })
+    setFilterProducts(newFilterProducts);
+  }, [products, searchField])
+  
 
   // when user input in search box will change value of search field value
   const onSearchChange = (event) => {
@@ -25,7 +33,8 @@ export default function Products() {
     <div className='row'>
         <div className='col l-12 m-12 c-12'>
             <Search onSearchHandler={onSearchChange}
-            placeholder="Search for product name"
+            placeholder="Search for product"
+            name="Search :"
             classname="search-box"
             />
         </div>    

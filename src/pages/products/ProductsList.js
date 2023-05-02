@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
 
 export default function ProductsList(props) {
+  
   return (
     <div className={`row ${props.classname}`}>
-       {props.filterProducts.map(product => (
-            <Link className="col l-3 m-6 c-6" to={product.id.toString()} key={product.id}>
-            <p>{product.productname}</p>
-            <p>Price: {product.productprice}</p>
-            <p>Number of stock: {product.stock}</p>
+       {props.filterProducts.map((product) => {
+        const {id, productname, productprice, stock} = product;
+       return (
+            <Link className="col l-3 m-6 c-12" to={id.toString()} key={id}>
+            <p>{productname}</p>
+            <p>Price: {productprice}</p>
+            <p>Number of stock: {stock}</p>
           </Link>
-        ))}
+        )}
+        )}
     </div>
   )
 }
