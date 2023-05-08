@@ -10,7 +10,6 @@ export default function HelpLayout() {
                 <NavLink className="col l-2 m-6 c-6 l-o-3" to="faq">View the FAQ</NavLink>
                 <NavLink className="col l-2 m-6 c-6 l-o-2" to="contact">Contact Us</NavLink>
             </nav>
-
             <Outlet />
         </div>
   )
