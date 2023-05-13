@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-  --primary: #bc4123;
-  --secondary: #2b3452;
+  --primary: #fac2ecc6;
+  --secondary: #ffffffda;
 }
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   font-family: "Poppins";
   background: var(--secondary);
 }
 * {
-  color: #fff;
+ 
   margin: 0;
 }
 p {
@@ -21,7 +21,7 @@ button {
   border: 0;
   padding: 8px;
   border-radius: 4px;
-  color: white;
+  color: rgb(0, 0, 0);
   background: var(--primary);
   cursor: pointer;
 }
