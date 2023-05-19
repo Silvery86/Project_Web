@@ -1,0 +1,30 @@
+/* navbar */
+nav{
+    height: max-content;
+    background-color:black;
+
+}
+nav a{
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 35px 0;
+    height: 100px;
+    color: white;
+}
+nav a .cart{
+    color: white;
+    
+}
+nav :nth-child(1){
+    padding: 0;
+}
+nav :nth-child(1).active{
+    background:black
+}
+nav img{
+    max-height: 100px;
+}
+header nav a.active {
+    background: var(--primary);
+}
+
