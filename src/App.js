@@ -21,6 +21,8 @@ import ProductsLayout from "./layout/ProductsLayout";
 import Products, { productsLoader } from "./pages/products/Products";
 import ProductDetails, { productDetailsLoader } from "./pages/products/ProductDetails";
 import ProductError from "./pages/products/ProductError";
+import UserLayout from "./layout/UserLayout";
+import SignIn from "./pages/user/SignIn";
 
 
 
@@ -55,6 +57,12 @@ const router = createBrowserRouter(
               path=":id"
               element={<ProductDetails/>}
               loader = { productDetailsLoader }
+            />
+          </Route>
+          
+          <Route path="signin-signup" element={<UserLayout />} >
+            <Route index 
+            element={<SignIn />} 
             />
           </Route>
           

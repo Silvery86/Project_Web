@@ -14,8 +14,8 @@ export default function Navigation() {
                 <NavLink className="l-1 m-2 c-12" to="about">About</NavLink>
                 <NavLink className="l-1 m-2 c-12" to="help">Help</NavLink>
                 <NavLink className="l-1 m-2 c-12" to="careers">Careers</NavLink>
-                <NavLink className="l-1 m-2 c-12" to="care">Sign In</NavLink>
-                <NavLink className="l-1 m-2 c-12" to="car">
+                <NavLink className="l-1 m-2 c-12" to="signin-signup">Sign In</NavLink>
+                <NavLink className="l-1 m-2 c-12" to="cart">
                     <FontAwesomeIcon 
                     icon={faCartShopping} 
                     bounce 
